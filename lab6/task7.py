@@ -17,14 +17,18 @@ def main():
             return
         matrix.append(row)
 
+    min_value = matrix[0][0]
+    max_value = matrix[0][0]
     min_column = 0
     max_column = 0
 
     for i in range(m):
         for j in range(n):
-            if matrix[i][j] < matrix[0][min_column]:
+            if matrix[i][j] < min_value:
+                min_value = matrix[i][j]
                 min_column = j
-            if matrix[i][j] > matrix[0][max_column]:
+            if matrix[i][j] > max_value:
+                max_value = matrix[i][j]
                 max_column = j
 
     for i in range(m):

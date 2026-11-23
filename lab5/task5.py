@@ -6,7 +6,7 @@ if n <= 0:
     print("N должно быть положительным.")
 else:
     a = list(map(int, input(f"Введите {n} целых чисел через пробел: ").split()))
-    
+
     if len(a) != n:
         print(f"Ошибка: введено {len(a)} чисел, а ожидалось {n}.")
     else:
@@ -15,7 +15,7 @@ else:
         for i in range(0, n, 2):
             result.append(a[i])
 
-        start_even = n - 2 if n % 2 == 0 else n - 1
+        start_even = n - 1 if n % 2 == 0 else n - 2
 
         if start_even >= 1:
             for i in range(start_even, 0, -2):
